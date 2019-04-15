@@ -1,4 +1,4 @@
-with (import <nixpkgs> {});
+with (import ./nix {});
 let
   env = bundlerEnv {
     name = "asciidoctor-stylesheet-factory-bundler-env";

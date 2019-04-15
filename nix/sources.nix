@@ -17,7 +17,7 @@ with rec
       then builtins.getAttr "type" spec
       else "tarball";
     in builtins.getAttr fetcherName {
-      "tarball" = pkgs.fetchzip;
+      "tarball" = builtins.fetchTarball;
       "file" = pkgs.fetchurl;
     };
 };
